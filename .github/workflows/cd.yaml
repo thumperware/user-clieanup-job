@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Deploy User cleanup job
-    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.6
+    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.8
     secrets:
       PROJECT_ID: ${{ vars.PROJECT_ID }}
       GCP_SA: ${{ vars.GCP_SA }}
@@ -18,7 +18,7 @@ jobs:
       # hoomanfr-domain-gke
       GKE_CLUSTER_NAME: ${{ vars.GKE_CLUSTER_NAME }}
       # us-west1-c
-      GKE_ZONE: ${{ vars.GKE_ZONE }}
+      GKE_LOCATION: ${{ vars.GKE_LOCATION }}
       GITHUBACTION_TOKEN: ${{ vars.GITHUBACTION_TOKEN }}
       # hoomanfr
       GITHUBACTION_USERNAME: ${{ vars.GITHUBACTION_USERNAME }}
