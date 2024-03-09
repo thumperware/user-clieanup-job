@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Deploy User cleanup job
-    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.13
+    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.14
     secrets:
       PROJECT_ID: ${{ vars.PROJECT_ID }}
       GCP_SA: ${{ vars.GCP_SA }}
