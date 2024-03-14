@@ -8,22 +8,9 @@ on:
 jobs:
   deploy:
     name: Deploy User cleanup job
-    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.32
+    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.45
     secrets:
-      PROJECT_ID: ${{ vars.PROJECT_ID }}
-      GCP_SA: ${{ vars.GCP_SA }}
-      DOCKER_REGISTRY_URL: ${{ vars.DOCKER_REGISTRY_URL }}
-      # it's in terraform project or github variables/secrets in the json file
       GCP_CREDENTIALS: ${{ vars.GCP_CREDENTIALS }}
-      # hoomanfr-domain-gke
-      GKE_CLUSTER_NAME: ${{ vars.GKE_CLUSTER_NAME }}
-      # us-west1-c
-      GKE_LOCATION: ${{ vars.GKE_LOCATION }}
-      GITHUBACTION_TOKEN: ${{ vars.GITHUBACTION_TOKEN }}
-      # hoomanfr
-      GITHUBACTION_USERNAME: ${{ vars.GITHUBACTION_USERNAME }}
-      # thumperq/cicd
-      DEPLOYMENT_REPO: ${{ vars.DEPLOYMENT_REPO }}
       ENVIRONMENT: staging
       DOMAIN_NAME: wms
       SERVICE_NAME: user-cleaner-job
