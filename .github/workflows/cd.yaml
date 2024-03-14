@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Deploy User cleanup job
-    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.45
+    uses: thumperq/cicd/.github/workflows/cdJob.yaml@v0.1.46
     secrets:
       GCP_CREDENTIALS: ${{ vars.GCP_CREDENTIALS }}
       ENVIRONMENT: staging
